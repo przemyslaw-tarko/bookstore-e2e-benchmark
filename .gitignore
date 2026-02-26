@@ -1,0 +1,23 @@
+node_modules/
+reports/
+dist/
+build/
+.env
+.env.*
+!.env.example
+
+# Playwright
+playwright-report/
+test-results/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Logs
+*.log
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

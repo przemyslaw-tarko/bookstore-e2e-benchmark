@@ -2,7 +2,8 @@
   "name": "bookstore-e2e-benchmark",
   "private": true,
   "version": "0.1.0",
-  "packageManager": "npm@10",
+  "type": "module",
+  "packageManager": "npm@9.2.0",
   "workspaces": [
     "packages/*",
     "tests/*"
@@ -15,9 +16,9 @@
     "test:playwright": "echo \"(todo)\"",
     "test:cypress": "echo \"(todo)\"",
     "test:selenium": "echo \"(todo)\"",
-    "env:up": "echo \"(todo)\"",
-    "env:down": "echo \"(todo)\"",
-    "env:reset": "echo \"(todo)\""
+    "env:up": "docker compose -f apps/bookstore/test-bookstore/docker-test-bookstore/docker-compose.yml up -d && BASE_URL=${BASE_URL:-http://localhost:8080} apps/bookstore/scripts/wait-for-app.sh",
+    "env:down": "docker compose -f apps/bookstore/test-bookstore/docker-test-bookstore/docker-compose.yml down",
+    "env:reset": "docker compose -f apps/bookstore/test-bookstore/docker-test-bookstore/docker-compose.yml down -v"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

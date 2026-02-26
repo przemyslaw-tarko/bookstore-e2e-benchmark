@@ -1,4 +1,5 @@
 export { config } from "./config/config.js";
+export { urls } from "./config/urls.js";
 export { getEnv, getBoolEnv } from "./config/env.js";
 
 export { uniqueEmail, uniqueId, uniqueUsername } from "./data/unique.js";

@@ -1,0 +1,28 @@
+{
+  "name": "bookstore-e2e-benchmark",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "npm@10",
+  "workspaces": [
+    "packages/*",
+    "tests/*"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test:all": "npm run test:playwright && npm run test:cypress && npm run test:selenium",
+    "test:playwright": "echo \"(todo)\"",
+    "test:cypress": "echo \"(todo)\"",
+    "test:selenium": "echo \"(todo)\"",
+    "env:up": "echo \"(todo)\"",
+    "env:down": "echo \"(todo)\"",
+    "env:reset": "echo \"(todo)\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.0.0"
+  }
+}
